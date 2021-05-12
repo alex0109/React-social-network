@@ -1,0 +1,81 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "contacts field"
+    ;
+
+    height: 100%;
+    &__contacts{
+        grid-area: contacts;
+        padding: 15px 0px 0px 30px;
+    }
+    &__title{
+        font-size: 30px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+    }
+    &__name{
+        padding: 15px;
+        width: 100%;
+
+        a.active {
+            color: gold;
+        }
+    }
+    &__field{
+        grid-area: field;
+        background-color: rgb(250, 250, 250);
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 1fr;
+        grid-template-areas: 
+        "message"
+        "area"
+        ;
+    }
+    &__messages{
+        grid-area: message;
+        align-self: end;
+        display: grid;
+        grid-template-columns: 1fr;
+        direction: row-reverse;
+
+    }
+    &__area{
+        grid-area: area;
+        align-self: center;
+        width: 100%;
+
+        textarea {
+            width: 100%;
+        }
+    }
+}
+
+.message {
+    display: grid;
+    grid-template-areas: 
+    "avatar block"
+    ;
+
+    margin: 15px;
+    &__avatar{
+        grid-area: avatar;
+        img {
+            width: 100%;
+        }
+    }
+    &__block{
+        grid-area: block;
+    }
+    &__name{
+        padding: 5px;
+    }
+    &__text{
+        padding: 5px;
+    }
+}
