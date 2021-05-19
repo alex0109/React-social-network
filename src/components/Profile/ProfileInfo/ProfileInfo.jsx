@@ -30,7 +30,7 @@ const ProfileInfo = (props) => {
             </li>
             <li className={`${styles.profInfo__item} ${styles.status}`}>
               Status:&nbsp;
-              <ProfileStatus status={"Hello friends"} />
+              <ProfileStatus status={props.status} updateUserStatus={props.updateUserStatus}/>
             </li>
             <li className={styles.profInfo__item}>
               ID:<p>{props.profile.userId}</p>
